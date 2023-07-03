@@ -19,6 +19,8 @@
   --main-color: #FF385C;
   --text-color1: #222222;
   --text-color2: #757575;
+  --text-color3: #424242;
+  --box-shadow-b-color2: #e2e2e2;
   --icon-color: #7c7c7c --main-transition: 0.3s;
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
@@ -79,12 +81,7 @@ ul {
 }
 
 
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 /* Small*/
 @media (min-width:768px) {
@@ -113,66 +110,6 @@ ul {
 
 }
 
-header {
-  padding: 0 25px;;
-  height: 80px;
- 
-  
-}
-
-header .header-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-
-}
-
-header .header-top .logo {
- width: 150px;
-
-}
-
-header .header-top .search {
-  display: flex;
-  background-color: #f7afaf;
-
-}header .header-top .search {
-  display: flex;
-  background-color: #f7afaf;
-
-}
-
-header .header-top .accounts {
-  display: flex;
-  background-color: #c2baba;
-
-}
-
-header .header-top .search {
-  display: flex;
-  background-color: #9c8787;
-
-}
-
-header .header-top .search {
-  display: flex;
-  justify-content: start;
-  background-color: #c3e7f1;
-
-}
-
-header .header-top .add-account {
-  display: flex;
-  background-color: #debcfa;
-
-}
-
-
-
-
-
-
 
 /*-------------------------- 
 
@@ -180,41 +117,269 @@ header .header-top .add-account {
 
 
 --------------*/
+  /* -------------header-top*/
+
+
+header .header-top {
+  position: fixed;
+  top:0;
+  z-index: 100;
+  height: 80px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 0.5px solid rgba(0,0,0,0.21);
+  padding: 40px 70px;
+
+
+}
+
+header .header-top .logo {
+  display: flex;
+  justify-content: start;
+}
+header .header-top .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 481px;
+  height: 60px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: 1.5px solid var(--box-shadow-b-color2);
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
+}
+header .header-top .search:hover {
+box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.3);
+}
+header .header-top 
+.search .destination {
+  cursor: pointer;
+  padding: 2px 10px;
+  border-right: 0.5px solid rgba(0,0,0,0.21);
+}
+header .header-top 
+.search-container{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+ 
+}
+header .header-top 
+.search-container input[type="text"] {
+  border:none;
+  padding: 10px;
+  width:170px;
+  font-size: 16px;
+  color:var(--text-color2);
+  cursor: pointer;
+}
+header .header-top 
+.search-container span.search-circle {
+  text-align: center;
+  background-color: var(--main-color);
+  color:white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  
+}
+
+header .header-top .accounts {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  /* background-color: #c2baba; */
+  padding: 10px 0;
+}
+
+
+
+header .header-top .accounts
+.add-logement
+ {
+  display: flex;
+  color: var(--text-color1);
+  font-weight: var(--weight-Regular);
+  cursor: pointer;
+  padding: 5px;
+  gap:20px;
+  border-radius: 30px;
+  margin: 0 20px;
+  padding:10px 12px;
+ }
+ header .header-top .accounts
+.add-logement:hover{
+  background-color:rgb(234, 232, 232);
+ }
+ header .header-top .accounts
+.add-lang{
+  cursor: pointer;
+  font-size: 17px;
+ }
+
+header .header-top .add-account {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid var(--box-shadow-b-color2);
+  border-radius: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 80px;
+}
+header .header-top .add-account:hover {
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25);
+
+
+}
+header .header-top .add-account 
+.user-circle  {
+
+  text-align: center;
+  background-color: var(--text-color3);
+  width: 30px;
+  height: 30px;
+  color:white;
+  border-radius: 50%;
+  }
 
 
 
 
+  /* -------------header-bottom*/
+  header .header-bottom{
+    position:sticky;
+    top:100px;
+    background-color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    padding: 0 40px ;
+    padding-top: 90px;
+    color: var(--text-color2);
+    /* background-color: red; */
+    
+   }
+   header .header-bottom
+   .link-icon-logement{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background: #000; */
+    padding-top: 40px;
+    padding-bottom: 15px;
+    cursor: pointer;
+   }
+    header .header-bottom
+   .link-icon-logement:hover{
+    color:black;
+    border-bottom: 2px solid var(--box-shadow-b-color2);
+   }
+  header div.header-bottom .link-icon-logement#i-01{
+    color:black;
+    border-bottom: 2px solid rgb(26, 26, 26);
+  }
+ 
 
+   header .header-bottom
+   #scroll-link{
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--box-shadow-b-color2);
+   }
 
-
+ header .header-bottom
+   #filter-link{
+    cursor: pointer;
+    margin-top: 20px;
+   width: 95px;
+   padding: 10px 10px 8px 10px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(173, 172, 172);
+    
+}
 
 /*-------------------------- 
 
 ************ End Header
 --------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------------- 
 
-************ Start Header ******************
+************ Start content******************
 
 
 --------------*/
 
+
+ .content{
+  
+    padding: 40px;
+    /* background-color: #000000; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px,2fr));
+    gap:20px
+  
+
+}
+.content .box{
+  cursor: pointer;
+
+  display: grid;
+  overflow: hidden;
+ /* background-color: #ffbaba; */
+  
+}
+.content .box .img-01{
+  /* background: url(/images/log-01.webp) no-repeat center/cover;
+  border-radius:17px ;
+  height: 250px; */
+}
+  .content .info .title{
+    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+.content .info .title h5{
+  color: black;
+  font-size: 17px;
+}
+
+.content .info .title .avis .fa-star{
+  color: black;
+  font-size: 14px;
+}
+.content .info .title i span{
+  
+  color: var(--text-color2);
+  font-size: 17px;
+}
+.content .info p{
+     color: var(--text-color2);
+}
+.content .info p#price{
+ margin-top: 10px;
+}
+.content .info p b{
+  color: black;
+  font-size: 17px;
+}
 
 
 
