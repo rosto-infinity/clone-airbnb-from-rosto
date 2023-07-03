@@ -292,8 +292,8 @@ header .header-top .add-account
    }
   .header-bottom
    .link-icon-logement:hover{
-    color:black;
-    border-bottom: 2px solid var(--box-shadow-b-color2);
+    color:var(--main-color);
+    border-bottom: 2px solid var(--main-color);
    }
   div.header-bottom .link-icon-logement#i-01{
     color:black;
@@ -347,7 +347,7 @@ header .header-top .add-account
 }
 .content .box{
   cursor: pointer;
-
+  margin-top: 10px;
   display: grid;
   overflow: hidden;
  /* background-color: #ffbaba; */
