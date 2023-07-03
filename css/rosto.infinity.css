@@ -123,7 +123,7 @@ ul {
 header .header-top {
   position: fixed;
   top:0;
-  z-index: 100;
+  z-index: 3;
   height: 80px;
   display: flex;
   justify-content:space-between;
@@ -145,12 +145,13 @@ header .header-top .search {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 481px;
+  /* min-width: 470px; */
   height: 60px;
-  padding: 10px 15px;
+  padding: 0px 5px 0px 15px;
   border-radius: 50px;
   border: 1.5px solid var(--box-shadow-b-color2);
   box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
+  /* background-color: red; */
 }
 header .header-top .search:hover {
 box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.3);
@@ -179,7 +180,9 @@ header .header-top
 }
 header .header-top 
 .search-container span.search-circle {
-  text-align: center;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   background-color: var(--main-color);
   color:white;
   width: 30px;
@@ -241,7 +244,9 @@ header .header-top .add-account:hover {
 }
 header .header-top .add-account 
 .user-circle  {
-
+  display: grid;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: var(--text-color3);
   width: 30px;
@@ -254,22 +259,26 @@ header .header-top .add-account
 
 
   /* -------------header-bottom*/
-  header .header-bottom{
-    position:sticky;
-    top:100px;
-    background-color:white;
+.header-bottom{
+    position:fixed;
+    top:80px;
+    height: 87px;
+    width: 100%;
+    background:white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 30px;
     text-align: center;
     padding: 0 40px ;
-    padding-top: 90px;
+    padding-top: 0px;
     color: var(--text-color2);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.0);
+
     /* background-color: red; */
     
    }
-   header .header-bottom
+  .header-bottom
    .link-icon-logement{
     display:grid;
     justify-content: center;
@@ -280,18 +289,18 @@ header .header-top .add-account
     padding-bottom: 15px;
     cursor: pointer;
    }
-    header .header-bottom
+  .header-bottom
    .link-icon-logement:hover{
     color:black;
     border-bottom: 2px solid var(--box-shadow-b-color2);
    }
-  header div.header-bottom .link-icon-logement#i-01{
+  div.header-bottom .link-icon-logement#i-01{
     color:black;
     border-bottom: 2px solid rgb(26, 26, 26);
   }
  
 
-   header .header-bottom
+ .header-bottom
    #scroll-link{
     margin-top: 20px;
     width: 30px;
@@ -300,23 +309,19 @@ header .header-top .add-account
     border: 2px solid var(--box-shadow-b-color2);
    }
 
- header .header-bottom
+.header-bottom
    #filter-link{
     cursor: pointer;
+    width: 95px;
+    padding: 5px 10px 8px 10px;
     margin-top: 20px;
-   width: 95px;
-   padding: 10px 10px 8px 10px;
     height: 40px;
     border-radius: 10px;
     border: 1px solid rgb(173, 172, 172);
     
 }
 
-/*-------------------------- 
-
-************ End Header
---------------*/
-
+/*----***** End Header-*/
 /*-------------------------- 
 
 ************ Start content******************
@@ -326,6 +331,7 @@ header .header-top .add-account
 
 
  .content{
+  margin-top:150px;
   
     padding: 40px;
     /* background-color: #000000; */
